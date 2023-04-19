@@ -13,7 +13,7 @@ import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data.sampler import SubsetRandomSampler
 from torch.utils.data import Dataset
-from torchvision.transforms import  ToPILImage
+from torchvision.transforms import ToPILImage
 
 # help functions to get the training/validation/testing data loader
 

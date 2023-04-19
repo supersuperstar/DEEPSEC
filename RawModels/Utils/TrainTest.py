@@ -53,7 +53,7 @@ def train_one_epoch(model, train_loader, optimizer, epoch, device):
         loss.backward()
         optimizer.step()
 
-        print('\rTrain Epoch{:>3}: [batch:{:>4}/{:>4}({:>3.0f}%)]  \tLoss: {:.4f} ===> '. \
+        print('\rTrain Epoch{:>3}: [batch:{:>4}/{:>4}({:>3.0f}%)]  \tLoss: {:.4f} ===> '.
               format(epoch, index, len(train_loader), index / len(train_loader) * 100.0, loss.item()), end=' ')
 
 
