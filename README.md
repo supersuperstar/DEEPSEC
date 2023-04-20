@@ -1,6 +1,6 @@
 # DEEPSEC: A Uniform Platform for Security Analysis of Deep Learning Model
 ## 0. 新加入内容
-在![system](./Attacks/)目录和![system](./Defenses/)目录下新增了1.bat。点击运行用于一次性跑完所有的攻击/防御算法。防御算法我更改了训练epoch为1，如果有条件可以在![system](./RawModels/)中的 ResNet 和 MNISTConv 中改一下 num_epochs 变量。
+在[system](./Attacks/)目录和[system](./Defenses/)目录下新增了1.bat。点击运行用于一次性跑完所有的攻击/防御算法。防御算法我更改了训练epoch为1，如果有条件可以在[system](./RawModels/)中的 ResNet 和 MNISTConv 中改一下 num_epochs 变量。
 
 ## 1. Description
 DEEPSEC is the first implemented uniform evaluating and securing system for deep learning models, which comprehensively and systematically integrates the state-of-the-art adversarial attacks, defenses and relative utility metrics of them.
