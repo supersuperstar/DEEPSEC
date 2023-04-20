@@ -19,7 +19,7 @@ from RawModels.basic_module import BasicModule
 
 # Training parameters for MNIST
 MNIST_Training_Parameters = {
-    'num_epochs': 20,
+    'num_epochs': 1,
     'batch_size': 100,
     'learning_rate': 0.05,
     'momentum': 0.9,

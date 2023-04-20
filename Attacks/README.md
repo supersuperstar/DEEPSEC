@@ -39,14 +39,14 @@ Generation of adversarial examples with specific attacking parameters that we us
 | **BIM**     | python BIM_Generation.py --dataset=MNIST --epsilon=0.3 --epsilon_iter=0.05 --num_steps=15 <br> python BIM_Generation.py --dataset=CIFAR10  --epsilon=0.1 --epsilon_iter=0.01 --num_steps=15 |
 | **PGD**     | python PGD_Generation.py --dataset=MNIST --epsilon=0.3 --epsilon_iter=0.05 <br> python PGD_Generation.py --dataset=CIFAR10 --epsilon=0.1 --epsilon_iter=0.01 |
 | **UMIFGSM** | python UMIFGSM_Generation.py --dataset=MNIST --epsilon=0.3 --epsilon_iter=0.05 <br> python UMIFGSM_Generation.py --dataset=CIFAR10 --epsilon=0.1 --epsilon_iter=0.01 |
-| **UAP**     | python UAP_Generation.py --dataset=MNIST --fool_rate=0.35 --epsilon=0.3 <br> python UAP_Generation.py --dataset=CIFAR10 --fool_rate=0.9 --epsilon=0.1 |
-| **DeepFool**| python DeepFool_Generation.py --dataset=MNIST --max_iters=50 --overshoot=0.02 <br> python DeepFool_Generation.py --dataset=CIFAR10 --max_iters=50 --overshoot=0.02 |
-| **OM**      | python OM_Generation.py --dataset=MNIST --initial_const=0.02 --learning_rate=0.2 --noise_count=20 --noise_mag=0.3 <br> python OM_Generation.py --dataset=CIFAR10 --initial_const=1 --learning_rate=0.02 --noise_count=20 --noise_mag=0.03137255 |
+| **UAP**[x]     | python UAP_Generation.py --dataset=MNIST --fool_rate=0.35 --epsilon=0.3 <br> python UAP_Generation.py --dataset=CIFAR10 --fool_rate=0.9 --epsilon=0.1 |
+| **DeepFool**[x]| python DeepFool_Generation.py --dataset=MNIST --max_iters=50 --overshoot=0.02 <br> python DeepFool_Generation.py --dataset=CIFAR10 --max_iters=50 --overshoot=0.02 |
+| **OM**[x]      | python OM_Generation.py --dataset=MNIST --initial_const=0.02 --learning_rate=0.2 --noise_count=20 --noise_mag=0.3 <br> python OM_Generation.py --dataset=CIFAR10 --initial_const=1 --learning_rate=0.02 --noise_count=20 --noise_mag=0.03137255 |
 | **LLC**     | python LLC_Generation.py --dataset=MNIST --epsilon=0.3 <br> python LLC_Generation.py --dataset=CIFAR10 --epsilon=0.1 |
 | **RLLC**    | python RLLC_Generation.py --dataset=MNIST --epsilon=0.3 --alpha=0.5 <br> python RLLC_Generation.py --dataset=CIFAR10 --epsilon=0.1 --alpha=0.5 |
 | **ILLC**    | python ILLC_Generation.py --dataset=MNIST --epsilon=0.3 --epsilon_iter=0.05 <br> python ILLC_Generation.py --dataset=CIFAR10 --epsilon=0.1 --epsilon_iter=0.01 |
 | **TMIFGSM** | python TMIFGSM_Generation.py --dataset=MNIST --epsilon=0.3 --epsilon_iter=0.05 <br> python TMIFGSM_Generation.py --dataset=CIFAR10 --epsilon=0.1 --epsilon_iter=0.01 |
-| **JSMA**    | python JSMA_Generation.py --dataset=MNIST --theta=1.0 --gamma=0.1 <br> python JSMA_Generation.py --dataset=CIFAR10 --theta=1.0 --gamma=0.1 |
-| **BLB**     | python BLB_Generation.py --dataset=MNIST <br> python BLB_Generation.py --dataset=CIFAR10 |
-| **CW2**     | python CW2_Generation.py --dataset=MNIST --confidence=0 --initial_const=0.001 <br> python CW2_Generation.py --dataset=CIFAR10 --confidence=0 --initial_const=0.001 |
-| **EAD**     | python EAD_Generation.py --dataset=MNIST --confidence=0 --beta=0.001 --EN=True <br> python EAD_Generation.py --dataset=CIFAR10 --confidence=0 --beta=0.001 --EN=True |
+| **JSMA**[x]    | python JSMA_Generation.py --dataset=MNIST --theta=1.0 --gamma=0.1 <br> python JSMA_Generation.py --dataset=CIFAR10 --theta=1.0 --gamma=0.1 |
+| **BLB**[x]     | python BLB_Generation.py --dataset=MNIST <br> python BLB_Generation.py --dataset=CIFAR10 |
+| **CW2**[x]     | python CW2_Generation.py --dataset=MNIST --confidence=0 --initial_const=0.001 <br> python CW2_Generation.py --dataset=CIFAR10 --confidence=0 --initial_const=0.001 |
+| **EAD**[x]     | python EAD_Generation.py --dataset=MNIST --confidence=0 --beta=0.001 --EN=True <br> python EAD_Generation.py --dataset=CIFAR10 --confidence=0 --beta=0.001 --EN=True |

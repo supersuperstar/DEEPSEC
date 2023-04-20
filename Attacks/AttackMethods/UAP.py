@@ -64,7 +64,7 @@ class UniversalAttack(Attack):
         print('\n\nstarting to compute the universal adversarial perturbation with the training dataset ......\n')
 
         iteration, ratio = 0, 0.0
-        uni_pert = torch.zeros(size=iter(dataset).next()[0].shape)
+        uni_pert = torch.zeros(size=next(iter(dataset))[0].shape)
         while ratio < self.fooling_rate and iteration < self.max_iter_universal:
             print('iteration: {}'.format(iteration))
 

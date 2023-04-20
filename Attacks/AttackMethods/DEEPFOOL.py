@@ -11,11 +11,16 @@
 
 import numpy as np
 import torch
-from torch.autograd.gradcheck import zero_gradients
+# from torch.autograd.gradcheck import zero_gradients
 
 from Attacks.AttackMethods.AttackUtils import tensor2variable
 from Attacks.AttackMethods.attacks import Attack
 
+def zero_gradients(x):
+    if isinstance(x, torch.Tensor):
+        if x.grad is not None:
+            x.grad.detach_()
+            x.grad.zero_()
 
 class DeepFoolAttack(Attack):
 

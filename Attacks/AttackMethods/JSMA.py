@@ -11,11 +11,16 @@
 
 import numpy as np
 import torch
-from torch.autograd.gradcheck import zero_gradients
+#from torch.autograd.gradcheck import zero_gradients
 
 from Attacks.AttackMethods.AttackUtils import tensor2variable
 from Attacks.AttackMethods.attacks import Attack
 
+def zero_gradients(x):
+    if isinstance(x, torch.Tensor):
+        if x.grad is not None:
+            x.grad.detach_()
+            x.grad.zero_()
 
 class JSMAAttack(Attack):
     def __init__(self, model=None, theta=1.0, gamma=0.1):
@@ -153,10 +158,10 @@ class JSMAAttack(Attack):
             p1, p2 = self.saliency_map(jacobian, var_target, increasing, search_domain, num_features, device)
             # apply modifications
             var_sample_flatten = var_sample.view(-1, num_features)
-            var_sample_flatten[0, p1] += self.theta
-            var_sample_flatten[0, p2] += self.theta
-
-            new_sample = torch.clamp(var_sample_flatten, min=0.0, max=1.0)
+            new_sample_flatten = var_sample_flatten.clone()
+            new_sample_flatten[0, p1] += self.theta
+            new_sample_flatten[0, p2] += self.theta
+            new_sample = torch.clamp(new_sample_flatten, min=0.0, max=1.0)
             new_sample = new_sample.view(shape)
             search_domain[p1] = 0
             search_domain[p2] = 0

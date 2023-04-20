@@ -18,7 +18,7 @@ from RawModels.basic_module import BasicModule
 # global CIFAR10_Training_Parameters
 
 CIFAR10_Training_Parameters = {
-    'num_epochs': 200,
+    'num_epochs': 1,
     'batch_size': 32,
     'lr': 1e-3
 }
