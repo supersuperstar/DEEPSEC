@@ -19,7 +19,9 @@ warnings.filterwarnings("ignore")
 import numpy as np
 import torch
 from PIL import Image, ImageFilter
-from skimage.measure import compare_ssim as SSIM
+# from skimage.measure import compare_ssim as SSIM
+from skimage.metrics import structural_similarity as SSIM
+
 
 sys.path.append('%s/../' % os.path.dirname(os.path.realpath(__file__)))
 
@@ -261,7 +263,7 @@ class AttackEvaluate:
             if self.successful(adv_softmax_preds=self.softmax_prediction[i], nature_true_preds=self.labels_samples[i],
                                targeted_preds=self.targets_samples[i], target_flag=self.Targeted):
                 cnt += 1
-                totalSSIM += SSIM(X=ori_r_channel[i], Y=adv_r_channel[i], multichannel=True)
+                totalSSIM += SSIM(im1=ori_r_channel[i], im2=adv_r_channel[i], multichannel=True)
 
         print('ASS:\t{:.3f}'.format(totalSSIM / cnt))
         return totalSSIM / cnt
@@ -427,7 +429,7 @@ if __name__ == '__main__':
     parser.add_argument('--adv_saver', type=str, default='../AdversarialExampleDatasets/',
                         help='the directory used to save the generated adversarial examples')
 
-    parser.add_argument('--attack', type=str, default='CW2', help='the attack name')
+    parser.add_argument('--attack', type=str, default='FGSM', help='the attack name')
 
     arguments = parser.parse_args()
     main(arguments)

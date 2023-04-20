@@ -1,7 +1,7 @@
-python NAT_Test.py --dataset=MNIST --adv_ratio=0.3 --clip_max=0.3 --eps_mu=0 --eps_sigma=50
-python NAT_Test.py --dataset=CIFAR10 --adv_ratio=0.3 --clip_max=0.1 --eps_mu=0 --eps_sigma=15
-python EAT_Test.py --dataset=MNIST --train_externals=True --eps=0.3 --alpha=0.05
-python EAT_Test.py --dataset=CIFAR10 --train_externals=True --eps=0.0625 --alpha=0.03125
+@REM python NAT_Test.py --dataset=MNIST --adv_ratio=0.3 --clip_max=0.3 --eps_mu=0 --eps_sigma=50
+@REM python NAT_Test.py --dataset=CIFAR10 --adv_ratio=0.3 --clip_max=0.1 --eps_mu=0 --eps_sigma=15
+@REM python EAT_Test.py --dataset=MNIST --train_externals=True --eps=0.3 --alpha=0.05
+@REM python EAT_Test.py --dataset=CIFAR10 --train_externals=True --eps=0.0625 --alpha=0.03125
 python PAT_Test.py --dataset=MNIST --eps=0.3 --step_num=40 --step_size=0.01
 python PAT_Test.py --dataset=CIFAR10 --eps=0.03137 --step_num=7 --step_size=0.007843
 python DD_Test.py --dataset=MNIST --initial=False --temp=50
